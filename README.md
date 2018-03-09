@@ -1,2 +1,2 @@
-# charitytoken
-charity campaign token
+# Charitytoken
+Charity campaign token opensource
