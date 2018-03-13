@@ -35,7 +35,7 @@ module.exports = {
           .build();
         transaction.sign(issuingKeys);
         return server.submitTransaction(transaction);
-      })
+      }) 
       .catch(function(error) {
         return error;
       });
