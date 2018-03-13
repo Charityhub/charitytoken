@@ -27,7 +27,7 @@ The sellar operations required for the above steps follow closely to the descrip
 
 ### Releasing Funds to Campaign Owner With Validator Oracle 
 
-Funds in the Execution Escrow Account are locked and will be slowly realeased to the campaign owner after the campaign owner successfully acieves the target for each sub-campaign.
+Funds in the Execution Escrow Account are locked and will be realeased in small amounts to the campaign owner only after the campaign owner successfully achieves the target for each sub-campaign.
 
 But how do we know whether the campaign owner actually completes the goal of each sub-campaign? This is where a third party auditor comes in. A third party auditor is assigned to validate whether the campaign owner actually completes the target of each sub-campaign. The campaign owner must provide evidence for the auditor to check and validate. Once validation is complete, then the reward money will be released to the campaign owner.
 
@@ -35,8 +35,6 @@ At a high level, the steps in Stellar are as follow:
 1. The Execution Escrow Account is set to require another signature from the Validator to perform any transaction - so now the Execution Escrow Account requires signature from Charity Hub, Campaign Owner, and the Validator.
 2. Charity Hub creates transactions to send funds from the Execution Escrow Account to the Campaign Owner account (each transaction correspond to the reward assciated to each sub-campaign). These transactions are pre-signed by Charity Hub and Campaign Owner. The Validator will only sign each transaction once it has validated the completion of the sub-campaign.
 3. In the case that the Campaign Owner is not able to complete all the sub-campaign goals by a certain deadline, the Execution Escrow Account issues a buy offer for the fundraising token to refund the remaining money back.
-
-Here are the steps in Stellar:
 
 Let:
 Q = number of subcampaign,
