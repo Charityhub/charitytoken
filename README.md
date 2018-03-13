@@ -80,7 +80,7 @@ To answer this, we would like to break the question down into two parts: 1) why 
 
 2) Implementing our platform on Stellar provides several advantages. First, through cryptocurrency such as lumen, donations can be processed seamlessly and without boundary. We hope this would allow for a bigger donation fund for the charities. Secondly, Stellar network is known for low transaction cost and high speed, which is ideal for this application.  
 
-## How does Charity Hub work?
+### How does Charity Hub work?
 
 1. CHARITY submit a Campaign
 2. DONOR donate to a Campaign by buying Campaign Token 
@@ -90,14 +90,14 @@ To answer this, we would like to break the question down into two parts: 1) why 
 6. VALIDATOR Sign-off a Campaign
 7. Payment release for the next Sub-Campaign
 
-## How do validator verify charity's work?
+### How do validator verify charity's work?
 Upon completion of a sub-campaign, charity must send proof of work (pictures, certifying document, etc.) to validator for review. Should validator approve, the multi signature mechanism will release advance funding for the next sub-campaign. In later phase, we plan to implement profile and rating mechanism for donor, charity, and validator for check and balance purposes.  
 
-## How to help contribute to Charity Hub?
+### How to help contribute to Charity Hub?
 For suggestion/feedback: http://charity-hub.org/contact-us/
 For donation: GBAQOXM4JDAPHL4VUJAJWL3CIKP7ENLWKWTKI7VOQJKTIEI7VCIOTKGX
 
-## How can I trust you?
+### How can I trust you?
 
 Charity Hub is under [CRM Charity], a registered nonprofit foundation that aims to help other people by using our expertise in technology. We focus in improving people’s education, and also helping other non-profit organization in area of technologies. Based in Bangkok, the foundation is initiated by the team of CRM and Cloud Consulting Company Limited, the cloud computing and IT consulting expert in Thailand and the sponsors from technology companies and international organization.
 
