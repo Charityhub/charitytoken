@@ -61,16 +61,59 @@ In parallel, to guarantee that the Campaign Owner will refund the money back in 
         Required Signature: Campaign Owner & Validator
 
 ### Future Phase / Road Map
-1. Integration with third party exchange to convert xlm to charities' preferred fiat currency
-2. Integration with third party wallet to facilitate seamless donation experience
+1. Integration to third party exchange to convert xlm to charities' preferred fiat currency
+2. Integration to third party wallet to facilitate seamless donation experience
 3. Account profiles for donors, charities, and validators
 4. Consideration of adding donor representative into multi-signature escrow account
 5. Improved refund mechanism - currently supports first come first serve but would shift to pro-rata basis
 6. Flexible cancellation of ongoing campaign - currently donor refunds only happen at the end of a fixed deadline.
+
+
+## FAQ
+### What is Charity Hub?
+Charity Hub is an XLM-based donation crowdfunding platform that facilitates donation by acting as an ICO platform to issue stellar based asset tokens for charities. The platform focuses on visibility and verifiability, under the concept “Donate without Doubt. Payment by Result”. Charity Hub helps good-minded individuals and organizations raise fund by leveraging Stellar’s strength such as token creation, built-in exchange, multi-signature escrow account, and time bound, with third-party participation as an oracle. Donations will be held in an escrow pool and only released when proof of work has been submitted to and verified by a Validator. We believe this will eliminate the stigma that many donors traditionally have on actual impact of their contribution - resulting in a larger donation pool for charities.
+
+### Why did we choose to do a charity platform on stellar network?
+To answer this, we would like to break the question down into two parts: 1) why do a charity platform? and 2) why built in on stellar’s network?
+
+1) We decided to build a charity platform because, through our work at [CRM Charity], we realized that the main barriers to donation are visibility and verifiability. Therefore, we want to build an application that resolves these issues by taking advantages of the features and functionalities in Stellar.
+
+2) Implementing our platform on Stellar provides several advantages. First, through cryptocurrency such as lumen, donations can be processed seamlessly and without boundary. We hope this would allow for a bigger donation fund for the charities. Secondly, Stellar network is known for low transaction cost and high speed, which is ideal for this application.  
+
+## How does Charity Hub work?
+
+1. CHARITY submit a Campaign
+2. DONOR donate to a Campaign by buying Campaign Token 
+3. Payment for the first Sub-Campaign released 
+4. CHARITY submit Proof of Works
+5. VALIDATOR verify Proof of Works
+6. VALIDATOR Sign-off a Campaign
+7. Payment release for the next Sub-Campaign
+
+## How do validator verify charity's work?
+Upon completion of a sub-campaign, charity must send proof of work (pictures, certifying document, etc.) to validator for review. Should validator approve, the multi signature mechanism will release advance funding for the next sub-campaign. In later phase, we plan to implement profile and rating mechanism for donor, charity, and validator for check and balance purposes.  
+
+## How to help contribute to Charity Hub?
+For suggestion/feedback: http://charity-hub.org/contact-us/
+For donation: GBAQOXM4JDAPHL4VUJAJWL3CIKP7ENLWKWTKI7VOQJKTIEI7VCIOTKGX
+
+## How can I trust you?
+
+Charity Hub is under [CRM Charity], a registered nonprofit foundation that aims to help other people by using our expertise in technology. We focus in improving people’s education, and also helping other non-profit organization in area of technologies. Based in Bangkok, the foundation is initiated by the team of CRM and Cloud Consulting Company Limited, the cloud computing and IT consulting expert in Thailand and the sponsors from technology companies and international organization.
+
+CRM Charity Foundation: http://www.crm-c.org/ 
+Certificate of Foundation Registration:
+http://www.ratchakitcha.soc.go.th/DATA/PDF/2555/D/074/80.PDF 
+English Translation can be found here:
+https://drive.google.com/drive/folders/16moZHDICtrrFeyYjXE4SpLtX9TzHN85X
+  
+
     
     
    [Stellar Crowdfunding]: <https://www.stellar.org/blog/multisig-and-simple-contracts-stellar>
+   [CRM Charity]: <http://www.crm-c.org/>
    [Stellar Smart Contracts]: <https://www.stellar.org/developers/guides/walkthroughs/stellar-smart-contracts.html>
    [Stellar]: <https://www.stellar.org/>
    [Charity Hub]: <http://charity-hub.org>
    
+
