@@ -60,9 +60,13 @@ In parallel, to guarantee that the Campaign Owner will refund the money back in 
         Operations: Create offer to buy all the Fundraising Token
         Required Signature: Campaign Owner & Validator
 
-
-We've shared the javascript code we used to execute these stellar operations in this github repository. 
-
+### Future Phase / Road Map
+1. Integration with third party exchange to convert xlm to charities' preferred fiat currency
+2. Integration with third party wallet to facilitate seamless donation experience
+3. Account profiles for donors, charities, and validators
+4. Consideration of adding donor representative into multi-signature escrow account
+5. Improved refund mechanism - currently supports first come first serve but would shift to pro-rata basis
+6. Flexible cancellation of ongoing campaign - currently donor refunds only happen at the end of a fixed deadline.
     
     
    [Stellar Crowdfunding]: <https://www.stellar.org/blog/multisig-and-simple-contracts-stellar>
