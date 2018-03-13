@@ -49,16 +49,16 @@ A set of transactions are  created to send funds to the Campaign Owner account b
         Account: Execution Escrow
         Sequence Number: M+1 to M+Q
         Operations: Send S(q) XLM to Campaign Owner Account
-        Required Signature: Charity Hub, Campaign Owner, Validator
+        Required Signature: Campaign Owner & Validator
 
-In parallel, to guarantee that the Campaign Owner will refund the money back in the case where it fails to complete all the sub-campaign goals by the end of the campaign execution deadline, we create a set of pre-signed transactions (with sequence number M+1 to M+Q) to issue a buy offer for the token upfront with minimum timebound set to the deadline date. For example, if the campaign owner completed only "j" out of the Q subcampaigns by the end of the campaign execution deadline, then we can submit the refund transaction with sequence number M+j+1 to the network.
+In parallel, to guarantee that the Campaign Owner will refund the money back in the case where it fails to complete all the sub-campaign goals by the end of the campaign execution deadline, Charity Hub create a set of pre-signed transactions (with sequence number M+1 to M+Q) to issue a buy offer for the token upfront with minimum timebound set to the deadline date. For example, if the campaign owner completed only "j" out of the Q subcampaigns by the end of the campaign execution deadline, then we can submit the refund transaction with sequence number M+j+1 to the network.
 
     Refund Transactions:
         Account: Execution Escrow
         Sequence Number: M+1 to M+Q
         Time Bound: minimum time - campaign deadline
         Operations: Create offer to buy all the Fundraising Token
-        Required Signature: Charity Hub, Campaign Owner, Validator
+        Required Signature: Campaign Owner & Validator
 
 
 We've shared the javascript code we used to execute these stellar operations in this github repository. 
