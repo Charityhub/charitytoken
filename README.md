@@ -39,8 +39,8 @@ At a high level, the steps in Stellar are as follow:
 Here are the steps in Stellar:
 
 Let:
-Q = number of subcampaign
-S(q) = reward for each subcampaign
+Q = number of subcampaign,
+S(q) = reward for each subcampaign,
 M = the current sequence number of the Execution Escrow account
 
     Multisignature Transactions:
@@ -69,8 +69,6 @@ In parallel, to guarantee that the Campaign Onwer will refund the money back in 
         Operations: Create offer to buy all the Fundraising Token
         Required Signature: Charity Hub, Campaign Owner, Validator
 
-
-We've shared the javascript code we used to execute these stellar operations in this github repository. 
 
     
     
