@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <title>Charity Hub Campaign</title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bd" >
+    <a class="navbar-brand" href="https://charity-hub.org">  <img class = "logo-img" src="logo.png"></a>
+
+
+</nav>
+
+
+
+
+
+    <div class="container campaign-header">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+
+          <img class = "campaign-banner" src="tft2.jpg">
+
+
+          <div class=  "subscribe">
+
+               <div class= "subscribe-well">
+
+                     <form action='/subscribe' method='POST'>
+                      <div class="input-group subcrbe-form">
+                         <input class="bt-subscribe-input" name="email" id="email" type="email" placeholder="Your Email" required>
+                         <button class="btn btn-info btn-lg bt-subscribe" type="submit">Subscribe</button>
+                         <input type="hidden" value="0" name="campaign_id" />
+                      </div>
+
+                     </form>
+                     <small class="promise"><em>Subscribe to receive updates about the campaign</em></small>
+               </div>
+
+
+
+        </div>
+
+
+        </div>
+        <div class="col-lg-5 col-sm-12">
+          <h6 class="text-info">Funding Campaign</h6>
+          <hr>
+          <h5> Community Tourism with Local Youth Guide </h5>
+
+          <h7 class="text-secondary"> Local youth guided community tour in Bangkajao, Thailand. Aims to improve communication and leadership skills for local youth and to bring revenue to the community<br> </h7>
+
+
+          <div class="row">
+            <div class="col">
+                    <h6 style="margin-top:3%;">CAMPAIGN OWNER  </h6>
+                      <div class="row">
+                        <div class="col-4">
+
+                          <img class = "campagin-owner-small-img" src="tf.jpg">
+
+                        </div>
+                        <div class="col campaign-owner-text">
+                          <h8>Teach For Thailand</h8>
+                          <p class="text-secondary"> Bangkok, Thailand</p>
+                        </div>
+                      </div>
+              </div>
+
+              <div class="col">
+                      <h6 style="margin-top:3%;">CAMPAIGN VALIDATOR  </h6>
+                        <div class="row">
+                          <div class="col-4">
+
+                            <img class = "campagin-owner-small-img" src="logo2.jpg">
+
+                          </div>
+                          <div class="col campaign-owner-text">
+                            <h8>Charity Hub</h8>
+                            <p class="text-secondary"> Bangkok, Thailand</p>
+                          </div>
+                        </div>
+                </div>
+
+          </div>
+
+          <!--
+          <h7 class="text-secondary"> Improve digital literacy of 4th and 5th grade orphans in Bangkok. </h7>
+
+          <h7 > Improve digital literacy of 4th and 5th grade orphans in Bangkok. <br>  </h7>
+
+          <p><i class="fas fa-user"></i> CAMPAIGN OWNER</p>
+          <div>
+
+            <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+          </div>
+
+          <div class="row owner-top">
+            <div class="col">
+              <h10>CAMPAIGN OWNER</h10>
+              <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+            </div>
+            <div class="col">
+              <h10>CAMPAIGN AUDITOR</h10>
+                <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+            </div>
+          </div>
+-->
+          <small> Campaign Escrow Account Public ID & Details: </small>
+          <a href="https://stellar.debtmoney.xyz/#/addr/GB36BS44SVVBB26WOBHPZMPW72ZMFTHQSYBAQ3MS77YATZ773YHFRJ7C" class="publicID" target="_blank">GB36BS44SVVBB26WOBHPZMPW72ZMFTHQSYBAQ3MS77YATZ773YHFRJ7C</a>
+
+          <p class="form-text secondary" style="display:none;"><i class="far fa-clock"></i> Fundraising Deadline: October 1st, 2018</p>
+          <p class= "donation-text"> <span class="donation-amount"> 900 XLM*</span> raised out of 900 XLM Goal - <span class="fund-completed"> COMPLETED <span> <p>
+
+
+            <div class="progress bar">
+
+              <div class="progress-bar bg-success"   style="width:100%;">100%</div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <small class = ".text-info">Raised by <%=donate_account.length%> People</small>
+              </div>
+              <div class="col">
+
+                <small class="form-text text-muted date-display" style="display:none;"> <%=time_left%> Left</small>
+
+              </div>
+            </div>
+
+            <div class="row" style="display: none;">
+              <div class="col-8">
+                <h6>Milestones Acheived So Far</h6>
+                <p>1</p>
+              </div>
+              <div class="col">
+                <h6>Rewards</h6>
+                <p>10 XLM </p>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#donationForm" disabled style="display:none;">Donation Complete</button>
+
+
+            <p class= "donation-text"> <span class="donation-amount"> 225 XLM</span> out of 900 XLM Funds Utilized  - <span class="fund-progress"> IN PROGRESS <span><p>
+            <div class="progress bar">
+                <div class="progress-bar bg-info"   style="width:22%;">25%</div>
+            </div>
+              <small class="form-text text-muted date-display dd">  <%=time_left%> Left </small>
+          <p class="text-muted deadline-text dd"><i class="fas fa-clock fa-xs"></i> Execution Deadline: May 1st, 2019</p>
+
+
+          <small class=".text-info">*This amount only reflects the total donated lumens received through token purchase, and thus do not include the initial balance of the account and any lumens sent directly to the account.</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="container descrtion-section">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <h6 class="text-info">Overview</h6>
+          <hr>
+          <div class = "container">
+            <p>Wat Bangnamphueangnai School is located in Bangkajao. It is the biggest green space near Bangkok and contains many interesting activities for tourists such as shopping at the floating market, boating, or biking.
+               In this project, we will set up a one-day trip in Bangkajao targeting 10 students, 20 tourists, and 5 teachers to participate. Tourists have to pay a fee about 200 baht for their meals and rental bike.
+               Two weeks before the trip, we will we have workshops to prepare students before the trip</p>
+
+
+
+
+
+          </div>
+
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="donationForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content  modal-form">
+
+                <div class="modal-header dn-form-title">
+                  <h4 style="margin:auto;display:block;"> Donation Information </h4>
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>-->
+                </div>
+
+               <div class="modal-body">
+                 <p> Please purchase the following token at your favorate exchange portal. The price is set at 1 donation token : 1 lumen. </p>
+                 <div class="container donation-coin">
+                   <img class = "coin-img" src="tf.jpg">
+                   <h6>Token Code: </h6>
+                   <p> CHARITY0TFT1 </p>
+                   <h6>Issuer Code:</h6>
+                   <p> charity-hub.org </p>
+                 </div>
+                 </div>
+
+
+               <!--
+                <div class="modal-header dn-form-title">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Donate</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="container">
+                    <p>Simply send your lumens to the following accound: 7sxoaj1kid9sfl191jd</p>
+                    <p>You'll receive a charity token specific to this campagin that you can use to redeem your lumens back at the end of the deadline if the charity fails to achieve any of its mission</p>
+                    <p>If you would like to get a certificate from the charity, then please fill in the details below</p>
+                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+
+
+
+
+
+
+                </div>
+
+-->
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="updates-tab" data-toggle="tab" href="#updates" role="tab" aria-controls="updates" aria-selected="false">Updates <span class="badge badge-dark">2</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="donors-tab" data-toggle="tab" href="#donors" role="tab" aria-controls="donors" aria-selected="false">Donations <span class="badge badge-dark"><%=transaction.length%></span></a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active des-block" id="description" role="tabpanel" aria-labelledby="description-tab">
+
+            <p> <strong>The objectives of this project include:</strong>
+              <br> 1) to improve students Thai and English communication skills
+              <br> 2) to give students a pathway to be a guide in the future
+              <br> 3) to train school leaders </p>
+
+            <p><strong>One trip will give these impacts: </strong></p>
+              <ul>
+                <li> Students have better Thai and English communication skills. They are important skills for students’ life and career in the future.
+                <li> Students have more awareness about their community and then they will have more agency. They will have more responsibility for the community (not to hurt the community and try to do something for it).
+                <li> Teachers and students are able to continue launching the project on their own and earn money approximately 100-300 per person per trip. - The community earns revenue from food, bike rental, car fare approximately 6,000 baht per trip.
+              </ul>
+
+            <p> For full campaign details, click <a href="https://drive.google.com/open?id=1NTdlu5B4x21_eNNe30v_YlEchNgkmovm" target="_blank">here</a> </p>
+
+
+
+
+
+
+
+          </div>
+          <div class="tab-pane fade" id="updates" role="tabpanel" aria-labelledby="updates-tab">
+
+            <div class="container">
+            <div class="update-block">
+              <div class="container">
+                  <small class="form-text .text-info date-display"> March 31, 2018 8:20 AM</small>
+              <div class="row">
+                <div class="col-1">
+                  <img class = "profile-img" src="tf.jpg">
+                </div>
+                <div class="col">
+                  <p>Posted by Teach for Thailand</p>
+
+                </div>
+              </div>
+              <hr style="margin-top:1em;">
+              <h3>Update on First Sub-Campaign </h3>
+
+              <img class = "update-img" src = "tft_update.jpg">
+              <p>
+                Our teachers are busy training students to become youth guides to lead the food tour in Bangkajao -
+                which is expected to happen during second week of April 2018!
+                Please stay tune for update as we look to complete our first sub-campaign soon!
+                <br><br>
+                Best Regards, <br>
+                Dujrapee Chaovanapricha, Project Manager of Teach for Thailand's Bangkajao Community Tourism Project
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="update-block">
+            <div class="container">
+                <small class="form-text .text-info date-display"> March 14, 2018 10:20 AM</small>
+            <div class="row">
+              <div class="col-1">
+                <img class = "profile-img" src="tf.jpg">
+              </div>
+              <div class="col">
+                <p>Posted by Teach for Thailand</p>
+
+              </div>
+            </div>
+            <hr style="margin-top:1em;">
+            <h3>Advanced Fund Received For The First Sub-Campaign </h3>
+
+            <img class = "update-img" src = "tft_tourism.jpg">
+            <p>Thank you all the donors for the donation.  We have received the fund of about 2,000 Thai Baht to work on the first sub-campaign.
+              We have started working and will keep everyone updated on the progress.
+              <br><br>
+              Best Regards, <br>
+              Dujrapee Chaovanapricha, Project Manager of Teach for Thailand's Bangkajao Community Tourism Project
+            </p>
+
+          </div>
+        </div>
+
+
+
+
+
+        </div>
+
+
+          </div>
+
+          <div class="tab-pane fade pre-scrollable" id="donors" role="tabpanel" aria-labelledby="donors-tab">
+                <div class="container ">
+
+                  <div class="donor-block">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="text-info">Public Key / Date</h6>
+                      </div>
+                      <div class="col">
+                        <h6 class="text-info" style="text-align: right;">Donation Amount</h6>
+                      </div>
+                    </div>
+                  </div>
+
+                  <%for (i = transaction.length-1; i >= 0; i--) {%>
+                  <div class="donor-block">
+                    <div class="row">
+                      <div class="col">
+                        <p><%= transaction[i].public_key%></p>
+                        <small class="text-muted"><%=transaction[i].timeSinceDonation%> ago </small>
+                      </div>
+                      <div class="col">
+                        <p style="text-align: right;"><%= transaction[i].donation_amount%> XLM</p>
+                      </div>
+                    </div>
+                    <hr style="margin-top:0.5em;">
+                  </div>
+                <%}%>
+
+
+
+                </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="col-lg-5 col-sm-12">
+
+
+
+
+          <h6 class="text-info">Sub-Campaign</h6>
+          <hr>
+
+          <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Local Food Trip in Bangkajao
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Train 5 teachers to become project leaders emphasize on food in Bangkajao. </li>
+          <li>Train 10 students to become youth guides emphasize on food in Bangkajao. </li>
+          <li>Provide 20 tourists an educational trip emphasizing on food in Bangkajao. </li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 225 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-progress"> In Progress </p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Ecosystem educational trip in Bangkajao
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Train 5 teachers to become project leaders emphasize on Ecosystem in Bangkajao.</li>
+          <li>Train 10 students to become youth guides emphasize on Ecosystem in Bangkajao. </li>
+          <li> Provide 20 tourists an educational trip emphasizing on Ecosystem in Bangkajao.</li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 225 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Local wisdom trip in Bangkajao
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Train 5 teachers to become project leaders emphasize on local wisdom in Bangkajao.</li>
+          <li>Train 10 students to become youth guides emphasize on local wisdom in Bangkajao. </li>
+          <li> Provide 20 tourists an educational trip emphasizing on local wisdom in Bangkajao.</li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 225 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Historical trip in Bangkajao
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Train 5 teachers to become project leaders emphasize on history in Bangkajao.</li>
+          <li>Train 10 students to become youth guides emphasize on history in Bangkajao. </li>
+          <li> Provide 20 tourists an educational trip emphasizing on history in Bangkajao.</li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 225 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+<!--
+          <div class="milestones">
+            <h3 class = "milestone-head"> Local Food Trip in Bangkajao</h3>
+            <div class = container>
+              <h6>Target:</h6>
+              <ul>
+                <li> a. Train 5 teachers to become project leaders emphasize on food in Bangkajao. </li>
+                <li> b. Train 10 students to become youth guides emphasize on food in Bangkajao. </li>
+                <li> c. Provide 20 tourists an educational trip emphasizing on food in Bangkajao. </li>
+              </ul>
+              <h6>Reward:</h6>
+              <p> 215 XLM </p>
+            </div>
+
+          </div>
+
+          <img class = "connect" src="connect.jpg">
+
+
+          <div class="milestones">
+            <h3 class = "milestone-head"> Milestone 2</h3>
+            <div class = container>
+              <h6>Milestone Description:</h6>
+              <h6>Reward:</h6>
+              <h6>Status:</h6>
+            </div>
+
+          </div>
+-->
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </body>
+</html>

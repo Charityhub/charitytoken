@@ -1,0 +1,495 @@
+hr {
+    display: block;
+    margin-top: -0.3em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-top: 1px solid #D3D3D3;
+}
+
+.vl {
+
+  height:100px;
+
+  border-left: 3px solid grey;
+
+position: absolute;
+  left: 50%;
+
+
+}
+
+.owner-top{
+  margin-top: 0.5em;
+
+}
+
+
+.donation-text{
+  margin-top:1em;
+
+}
+.donation-amount{
+  font-weight: bold;
+}
+
+.date-display{
+
+  text-align: right;
+
+}
+
+.bar{
+  margin-top: -0.8em;
+}
+
+.campagin-owner-small-img{
+
+  max-width: 100%;
+  max-height:100%;
+  border-radius: 50%;
+}
+
+.campaign-banner{
+
+  width:100%;
+  height: 390px;
+}
+
+.descrtion-section{
+  margin-top: 3em;
+}
+
+.milestones{
+
+  background-color: 	MintCream;
+  height: 200px;
+  width: 75%;
+  margin: auto;
+  border-style: solid;
+
+  border-radius: 10px;
+
+
+}
+
+.milestone-head{
+  background-color: LightBlue ;
+  text-align: center;
+  border-radius: 9px 9px 0px 0px;
+
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.campaign-header{
+
+  margin-top: 1.5em;
+}
+
+
+.bd{
+
+  background-color: white;
+  border-bottom: solid 1px grey;
+  box-shadow: 0px 0.5px 3px 0px;
+
+}
+
+.dn-form-title{
+  background-color: #d9d9d9;
+
+}
+
+.modal-form{
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.donation-form{
+  margin: 1em;
+
+}
+
+.donate-form-title-text{
+  text-align: center;
+}
+
+.pop-up-content{
+  background: white;
+  width:400px;
+  height:400px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+  .full-screen{
+    height: 100vh;
+  }
+
+  .blue-back{
+    background-color: #ffffe6   ;
+  }
+
+  .description-text{
+    color: #ffd9b3;
+    font-weight: bold;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .front-section{
+    padding-top:7em;
+  }
+
+  .pilot-campaign{
+    margin-top: 6em;
+
+    max-height: 40%;
+    max-width: 70%;
+    background-color:white;
+    border: 0.5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .campaign-featured-text{
+    margin-top: 3%;
+
+  }
+
+  .benefit-img{
+    width:150px;
+    height:150px;
+    margin-top: 4em;
+    margin-bottom:2em;
+  }
+  .des-img{
+    width:346.5px;
+    height:247.5px;
+  }
+  .des-img2{
+    width:346.5px;
+    height:247.5px;
+    position: absolute;
+    top: 210px;
+    left: 220px;
+  }
+
+  .front-page-img{
+    width: 100%;
+    max-height: 100%
+  }
+
+  .connect{
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  .text-header{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+  }
+  .bt-learnmore{
+    position: absolute;
+    top: 375px;
+    left: 90px;
+  }
+  .bt-learnmore2{
+    position: absolute;
+    top: 375px;
+    left: 220px;
+    width: 110px;
+  }
+
+
+  .business-pitch{
+    border: 15px solid #ffe6cc;
+    padding: 2em;
+  }
+
+  .who-are-we{
+    font-family: 'Patua One', cursive;
+    font-size: 40px;
+    color: #ff9933;
+  }
+
+  .active{
+      font-weight: bold;
+  }
+
+  .title{
+    font-family: 'Patua One', cursive;
+    font-size: 60px;
+    color: #ff9933;
+  }
+  .sub-title{
+    font-family: 'Istok Web', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+  /* SHIFT */
+nav ul li a {
+  position:relative;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+  color: #aaa;
+ font-weight: 800;
+ text-transform: uppercase;
+ margin: 0 10px;
+}
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #333;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+.jumbotron{
+  background-color: #f2f2f2 !important;
+  border-radius: 10px !important;
+}
+
+  .how-img{
+
+    height:200px;
+
+
+  }
+
+  .how-row{
+
+    margin-bottom:2em;
+  }
+
+  .update-block{
+    margin-top: 2em;
+    border: solid #e6e6e6 1px;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+  }
+
+  .update-block p{
+    font-style: normal;
+    font-weight: 400;
+
+  }
+
+  .des-block {
+    font-style: normal;
+    font-weight: 400;
+
+  }
+
+  .des-block{
+    padding: 2em;
+  }
+  .profile-img{
+
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+  }
+
+  .donor-block p{
+    font-size: small;
+    font-weight: 300;
+  }
+  .donor-block{
+    margin-top: 1em;
+
+  }
+
+  .tab-pane{
+    min-height: 500px;
+  }
+
+  .how-to-dv{
+    background: linear-gradient(180deg, #ffffe6  50%, white 50%);
+  }
+
+
+  .donor-cont{
+    min-height: 500px;
+  }
+
+  .nav-tabs{
+    margin-top:1em;
+  }
+
+  .campaign-featured-img{
+    width: 100%;
+    height:100%;
+  }
+  .campaign-row{
+    max-height: 100%;
+    max-width: 100%
+    border:solid 1px red;
+  }
+  .campaign-col{
+    max-height: 100%;
+    width:100%;
+    border: solid 1px;
+  }
+
+  .pilot-campaign:hover{
+    border-bottom: solid 1px grey;
+    box-shadow: 0px 0.5px 3px 0px;
+     cursor: pointer;
+     transform: scale(1.05);
+  }
+
+  .pilot-title{
+    font-family: 'Patua One', cursive;
+    font-size: 40px;
+    color: #ff9933;
+  }
+
+  .campaign-owner-text{
+    margin-left: -2%;
+  }
+
+  .campaign-owner-text p{
+    margin-top: -2%;
+    font-size: 80%;
+  }
+
+  #campaign{
+    background-color:#f2f2f2;
+  }
+
+  .footer {
+
+    padding: 1rem;
+    background-color: #ffffe6;
+    text-align: center;
+  }
+
+  .subscribe{
+    margin-top: 2%;
+    padding: 2%;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+
+  }
+
+  .subscribe-well{
+  text-align: center;
+  }
+
+  .subcrbe-form{
+    display: inline-block;
+
+  }
+  .donation-coin{
+    text-align: center;
+
+
+  }
+
+  .coin-img{
+    margin-left: auto;
+	  margin-right: auto;
+	  display: block;
+    max-width: 20%;
+    border-radius: 50%;
+  }
+
+
+  .bt-subscribe{
+    font-size: 90%;
+
+  }
+
+
+  .bt-subscribe-input{
+      font-size: 90%;
+      height: 39px;
+      top-margin: 0.1em;
+
+    }
+
+
+  .ol-alph{
+    list-style-type: lower-alpha;
+  }
+
+  .logo-img{
+    max-height: 50px;
+  }
+
+  .status-subcampaign-progress{
+    color:green;
+    font-weight: bold;
+
+  }
+
+  .status-subcampaign-pending{
+    color:#ffb31a;
+    font-weight: bold;
+
+  }
+  .publicID{
+
+    font-size: 10px;
+  }
+  .deadline-text{
+    margin-top: -18px;
+  }
+  .dd{
+    font-size: 70%;
+  }
+  .fund-completed{
+    font-weight: bold;
+    color: green;
+  }
+  .fund-progress
+  {
+    font-weight: bold;
+    color:#43aee0;
+  }
+
+  .container-coin{
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color: #e6f2ff;
+    border: solid 1px;
+  }
+
+  .update-img{
+    max-width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }

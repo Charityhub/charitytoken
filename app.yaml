@@ -1,0 +1,16 @@
+env: flex
+runtime: nodejs
+
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  SQL_USER: postgres
+  SQL_PASSWORD: charityhub123
+  SQL_DATABASE: postgres
+  INSTANCE_CONNECTION_NAME: daring-bit-197609:us-central1:charityhub-db
+
+
+beta_settings:
+  cloud_sql_instances: daring-bit-197609:us-central1:charityhub-db

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <title>Charity Hub Campaign</title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bd" >
+  <a class="navbar-brand" href="https://charity-hub.org">  <img class = "logo-img" src="logo.png"></a>
+
+</nav>
+
+
+
+
+
+    <div class="container campaign-header">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+
+          <img class = "campaign-banner" src="tft6.jpg">
+
+
+          <div class=  "subscribe">
+
+               <div class= "subscribe-well">
+
+                     <form action='/subscribe' method='POST'>
+                      <div class="input-group subcrbe-form">
+                         <input class="bt-subscribe-input" name="email" id="email" type="email" placeholder="Your Email" required>
+                         <button class="btn btn-info btn-lg bt-subscribe" type="submit">Subscribe</button>
+                         <input type="hidden" value="1" name="campaign_id" />
+                      </div>
+
+                     </form>
+                     <small class="promise"><em>Subscribe to receive updates about the campaign</em></small>
+               </div>
+
+
+
+        </div>
+
+
+        </div>
+        <div class="col-lg-5 col-sm-12">
+          <h6 class="text-info">Funding Campaign</h6>
+          <hr>
+          <h5> Ed-Decoration </h5>
+
+          <h7 class="text-secondary"> Renovate and reform classroom designs in Thai schools<br> </h7>
+
+
+
+          <div class="row">
+            <div class="col">
+                    <h6 style="margin-top:3%;">CAMPAIGN OWNER  </h6>
+                      <div class="row">
+                        <div class="col-4">
+
+                          <img class = "campagin-owner-small-img" src="tf.jpg">
+
+                        </div>
+                        <div class="col campaign-owner-text">
+                          <h8>Teach For Thailand</h8>
+                          <p class="text-secondary"> Bangkok, Thailand</p>
+                        </div>
+                      </div>
+              </div>
+
+              <div class="col">
+                      <h6 style="margin-top:3%;">CAMPAIGN VALIDATOR  </h6>
+                        <div class="row">
+                          <div class="col-4">
+
+                            <img class = "campagin-owner-small-img" src="logo2.jpg">
+
+                          </div>
+                          <div class="col campaign-owner-text">
+                            <h8>Charity Hub</h8>
+                            <p class="text-secondary"> Bangkok, Thailand</p>
+                          </div>
+                        </div>
+                </div>
+
+          </div>
+          <!--
+          <h7 class="text-secondary"> Improve digital literacy of 4th and 5th grade orphans in Bangkok. </h7>
+
+          <h7 > Improve digital literacy of 4th and 5th grade orphans in Bangkok. <br>  </h7>
+
+          <p><i class="fas fa-user"></i> CAMPAIGN OWNER</p>
+          <div>
+
+            <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+          </div>
+
+          <div class="row owner-top">
+            <div class="col">
+              <h10>CAMPAIGN OWNER</h10>
+              <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+            </div>
+            <div class="col">
+              <h10>CAMPAIGN AUDITOR</h10>
+                <img class = "campagin-owner-small-img" src="Oxfam.jpg">
+            </div>
+          </div>
+-->
+          <small> Campaign Escrow Account Public ID & Details: </small>
+          <a href="https://stellar.debtmoney.xyz/#/addr/GDZXRCZCPX5EXTYFFE47QAIC5PM6H454YFIQSTRGAQZNG6H5TCVZYOPZ" class="publicID" target="_blank">GDZXRCZCPX5EXTYFFE47QAIC5PM6H454YFIQSTRGAQZNG6H5TCVZYOPZ</a>
+
+
+
+          <p class= "donation-text"> <span class="donation-amount"><%=(Math.round(total_donation*100)/100).toFixed(2)%> XLM*</span> out of 42,555 XLM goal<p>
+
+
+            <div class="progress bar">
+
+              <div class="progress-bar bg-success"   style=<%-"width:"+Math.round(100*100*total_donation/42555)/100+"%" %> ><%=Math.round(100*100*total_donation/42555)/100%>%</div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <small class = ".text-info">Raised by <%=donate_account.length%> People</small>
+              </div>
+              <div class="col">
+
+                <small class="form-text .text-info date-display"> <%=time_left%> Left</small>
+
+              </div>
+            </div>
+
+            <div class="row" style="display: none;">
+              <div class="col-8">
+                <h6>Milestones Acheived So Far</h6>
+                <p>1</p>
+              </div>
+              <div class="col">
+                <h6>Rewards</h6>
+                <p>10 XLM </p>
+              </div>
+            </div>
+
+            <p class="text-muted dd"><i class="fas fa-clock fa-xs"></i> Fundraising Deadline: December 30, 2018</p>
+            <p class="text-muted deadline-text dd"><i class="fas fa-clock fa-xs"></i> Execution Deadline: May 30, 2019</p>
+
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#donationForm">Donate</button>
+            <small class=".text-info">*This amount only reflects the total donated lumens received through token purchase, and thus do not include the initial balance of the account and any lumens sent directly to the account.</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="container descrtion-section">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <h6 class="text-info">Overview</h6>
+          <hr>
+          <div class = "container">
+            <p>
+
+              Ed-Decoration is a project to renovate and reform classroom designs and develop technology
+              capabilities inside the classroom for Thai schools. Expecting to redesign and develop up to 3 classrooms per year, depending on
+              money donated and will continue doing this every year, collecting the information, research,
+              statistic, evidence, theory, Know-how and also the design of the classroom to improve the model of
+              the project which could lead this project to become the Social Enterprise that would be able to
+              sustain itself in the future.
+
+
+
+             </p>
+
+
+
+
+
+          </div>
+
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="donationForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content  modal-form">
+
+                <div class="modal-header dn-form-title">
+                  <h4 style="margin:auto;display:block;"> Donation Information </h4>
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>-->
+                </div>
+
+               <div class="modal-body">
+                 <p> Please purchase the following token at <a href="https://stellarterm.com" target="_blank">StellarTerm</a> or at your favorate exchange portal. The price of 1 token is 1 XLM. Please <strong>do not</strong> send the lumens directly to our account!</p>
+                 <div class="container-coin donation-coin">
+                   <img class = "coin-img" src="tf.jpg">
+                   <h6>Token Code: </h6>
+                   <p> CHARITY0TFT2 </p>
+                   <h6>Issuer Domain:</h6>
+                   <p> charity-hub.org </p>
+                   <h6>Issuer Public ID:</h6>
+                   <small> GBI4OTGDR7FNPN5KUU2JAV55TZQOH4N7S6CWFAYGTOOFMB5FSZY3EVTJ </small>
+                 </div>
+                  <p>Please refer to this <a href="https://docs.google.com/document/d/11368pOEQLkf9T6wfHmg6W_dPHZYpaJEeKaKi7_dlaSA/edit?usp=sharing" target="_blank">manual</a> for a step-by-step instruction on how to purchase a token on <a href="https://stellarterm.com" target="_blank">StellarTerm</a>.</p>
+                  </div>
+
+
+               <!--
+                <div class="modal-header dn-form-title">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Donate</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="container">
+                    <p>Simply send your lumens to the following accound: 7sxoaj1kid9sfl191jd</p>
+                    <p>You'll receive a charity token specific to this campagin that you can use to redeem your lumens back at the end of the deadline if the charity fails to achieve any of its mission</p>
+                    <p>If you would like to get a certificate from the charity, then please fill in the details below</p>
+                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+
+
+
+
+
+
+                </div>
+
+-->
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="updates-tab" data-toggle="tab" href="#updates" role="tab" aria-controls="updates" aria-selected="false">Updates <span class="badge badge-dark">0</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="donors-tab" data-toggle="tab" href="#donors" role="tab" aria-controls="donors" aria-selected="false">Donations <span class="badge badge-dark"><%=transaction.length%></span></a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active des-block" id="description" role="tabpanel" aria-labelledby="description-tab">
+
+            <p> <strong>Problems Faced by Thai Schools:<br></strong>
+
+              <br> 1) Lack of technology and teaching materials
+              <br> 2) Students lack motivation and inspiration to study
+              <br> 3) Outdated teaching method
+              <br> 4) Classrooms not designed to support learning process
+              </p>
+
+            <p><strong>Scope of Project: </strong></p>
+            <p>This project will be redesigning and equiping classrooms with:</p>
+            <ul>
+              <li> Technology Devices: Smart TV, Computer, Speaker, Microphone, Wifi Router</li>
+              <li> Teaching Equipments & Materials: Desk & Chair, Whiteboard, Announcment Board </li>
+              <li> Classroom Environment: Painting Color, Fan, Neon Lamp, Flooring Material, Furniture</li>
+
+
+            </ul>
+
+            <p> For full campaign details, click <a href="https://drive.google.com/open?id=1_Oy7fpighI-K6wiqLjrEurWn6GYe7b8z" target="_blank">here</a> </p>
+
+
+
+
+
+
+          </div>
+          <div class="tab-pane fade" id="updates" role="tabpanel" aria-labelledby="updates-tab">
+
+            <div class="container" style = "display:none;">
+            <div class="update-block">
+              <div class="container" >
+                <small class="form-text .text-info date-display"> February 21, 2018 10:20 AM</small>
+
+              <div class="row">
+                <div class="col-1">
+                  <img class = "profile-img" src="tf.jpg">
+                </div>
+                <div class="col">
+                  <p>Posted by Teach for Thailand</p>
+
+                </div>
+              </div>
+              <hr style="margin-top:1em;">
+              <h1>asdfasdfasdf</h1>
+              <p>adsfasdfasdfasdfasdfasdfasdf</p>
+
+
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+
+          <div class="tab-pane fade pre-scrollable" id="donors" role="tabpanel" aria-labelledby="donors-tab">
+                <div class="container ">
+
+                  <div class="donor-block">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="text-info">Public Key / Date</h6>
+                      </div>
+                      <div class="col">
+                        <h6 class="text-info" style="text-align: right;">Donation Amount</h6>
+                      </div>
+                    </div>
+                  </div>
+
+                  <%for (i = transaction.length-1; i >= 0; i--) {%>
+                  <div class="donor-block">
+                    <div class="row">
+                      <div class="col">
+                        <p><%= transaction[i].public_key%></p>
+                        <small class="text-muted"><%=transaction[i].timeSinceDonation%> ago </small>
+                      </div>
+                      <div class="col">
+                        <p style="text-align: right;"><%= transaction[i].donation_amount%> XLM</p>
+                      </div>
+                    </div>
+                    <hr style="margin-top:0.5em;">
+                  </div>
+                <%}%>
+
+
+
+                </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="col-lg-5 col-sm-12">
+
+
+
+
+          <h6 class="text-info">Sub-Campaign</h6>
+          <hr>
+
+          <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Technology Devices for 1st Classroom
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Buy 1 Smart TV </li>
+          <li>Buy 1 Computer </li>
+          <li>Buy 1 Microphone </li>
+          <li>Buy 1 Wifi Router </li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 5320 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Teaching Equipments & Materials for 1st Classroom
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Buy 30 Desks & Chairs</li>
+          <li>Buy 1 Whiteboard </li>
+          <li>Buy 1 Announcement Board </li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 3545 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Renovating Materials for 1st Classroom
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Buy 1 Color Paiting Set</li>
+          <li>Buy 4 Fans</li>
+          <li>Buy 4 Neon Lamps & Flooring Materials</li>
+          <li>Buy 1 Furniture Set</li>
+        </ol>
+        <h6>Reward:</h6>
+        <p> 2955 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Training & Workshop
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Train 5 teachers & 5 students to become proficient leaders with 21st century skills</li>
+
+        </ol>
+        <h6>Reward:</h6>
+        <p> 2365 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Renovate and Reform 2nd Classroom
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Buy 3 Smart TV, 3 Computer, 3 Speaker, 3 Microphone, 3 WIFI Router</li>
+          <li>Buy 90 Desks & Chairs, 3 Whiteboard, 3 Announcement Board</li>
+          <li>Buy 3 painting colors sets, 9 Fans, 9 Neon Lamps & Flooring Material, 3 Furniture sets</li>
+
+        </ol>
+        <h6>Reward:</h6>
+        <p> 14,185 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Renovate and Reform 3rd Classroom
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+        <h6>Target:</h6>
+        <ol class="ol-alph">
+          <li>Buy 3 Smart TV, 3 Computer, 3 Speaker, 3 Microphone, 3 WIFI Router</li>
+          <li>Buy 90 Desks & Chairs, 3 Whiteboard, 3 Announcement Board</li>
+          <li>Buy 3 painting colors sets, 9 Fans, 9 Neon Lamps & Flooring Material, 3 Furniture sets</li>
+
+        </ol>
+        <h6>Reward:</h6>
+        <p> 14,185 XLM </p>
+
+        <h6>Status:</h6>
+        <p class = "status-subcampaign-pending"> Pending </p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--
+          <div class="milestones">
+            <h3 class = "milestone-head"> Local Food Trip in Bangkajao</h3>
+            <div class = container>
+              <h6>Target:</h6>
+              <ul>
+                <li> a. Train 5 teachers to become project leaders emphasize on food in Bangkajao. </li>
+                <li> b. Train 10 students to become youth guides emphasize on food in Bangkajao. </li>
+                <li> c. Provide 20 tourists an educational trip emphasizing on food in Bangkajao. </li>
+              </ul>
+              <h6>Reward:</h6>
+              <p> 215 XLM </p>
+            </div>
+
+          </div>
+
+          <img class = "connect" src="connect.jpg">
+
+
+          <div class="milestones">
+            <h3 class = "milestone-head"> Milestone 2</h3>
+            <div class = container>
+              <h6>Milestone Description:</h6>
+              <h6>Reward:</h6>
+              <h6>Status:</h6>
+            </div>
+
+          </div>
+-->
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </body>
+</html>
